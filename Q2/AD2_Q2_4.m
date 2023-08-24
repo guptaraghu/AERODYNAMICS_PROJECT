@@ -1,0 +1,12 @@
+M1 = linspace(0,5,100);
+gamma=1.4;
+c=(2*gamma)/(gamma+1);
+pressur_ratio=1+(c*((M1.^2)-1));
+x1=(gamma+1)*(M1.^2);
+y1=(2+((gamma-1)*(M1.^2)));
+den_ratio=(x1./y1);
+temp_ratio=((pressur_ratio)./(den_ratio));
+plot(M1,temp_ratio,'r','Linewidth',2);
+xlabel('M1');
+ylabel('temprature ratio');
+sgtitle("M1 Vs temprature ratio");
